@@ -1,5 +1,6 @@
 """Script for printing hello world."""
 
+
 def hello_world(name: str = "Player") -> None:
     """Print a personalized 'Hello World!' message to the console.
 
