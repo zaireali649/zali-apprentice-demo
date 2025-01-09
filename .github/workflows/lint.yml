@@ -25,9 +25,9 @@ jobs:
     - name: Run pycodestyle
       run: |
         echo "Running pycodestyle..."
-        pycodestyle .\hello_world.py
+        pycodestyle .
 
     - name: Run pydocstyle
       run: |
         echo "Running pydocstyle..."
-        pydocstyle .\hello_world.py
+        pydocstyle . --match='.*\.py'
