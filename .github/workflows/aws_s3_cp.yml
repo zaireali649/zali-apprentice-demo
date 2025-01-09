@@ -19,6 +19,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
-    - name: Run pycodestyle
+    - name: Copy file to S3
       run: |
         aws s3 cp hello_world.py s3://zali-catch-all
