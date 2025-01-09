@@ -1,0 +1,22 @@
+name: Python AWS S3 CP
+
+on:
+  pull_request:
+
+jobs:
+  copy:
+    name: Copying File to S3
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Run pycodestyle
+      run: |
+        aws s3 cp hello_world.py s3://zali-catch-all
